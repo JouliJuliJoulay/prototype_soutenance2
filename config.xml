@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "fr.argosapps.prototype_soutenance2"
+        versionCode="10"
+        version   = "1.1.0">
+
+    <!-- versionCode is optional and Android only -->
+
+    <name>Prototype_soutenance2</name>
+
+    <description>
+        Regroupement de plusieurs API test pour l'application
+    </description>
+
+    <author href="http://argosapps.fr" email="contact@argosapps.fr">
+        Argos, Argonautes
+    </author>
+	
+<feature name="Notification">
+	<param name="android-package" value="org.apache.cordova.Notification" />
+</feature>
+<feature name="SplashScreen">
+    <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
+</feature>
+
+<!--image du splashscreen-->
+<gap:splash src="splashscreen/android/ldpi.png" gap:platform="android" gap:density="ldpi"/>
+<gap:splash src="splashscreen/android/mdpi.png" gap:platform="android" gap:density="mdpi"/>
+<gap:splash src="splashscreen/android/hdpi.png" gap:platform="android" gap:density="hdpi"/>
+<gap:splash src="splashscreen/android/xhdpi.png" gap:platform="android" gap:density="xhdpi"/>
+<preference name="splashscreen" value="splash" />
+<preference name="splashScreenDelay" value="10000" />
+
+
+</widget>
