@@ -14,13 +14,12 @@ color: #e66a52;
 body{
 background-color: #f2ecd6;
 width : 100%;	
-margin-top : -20px;
 padding: 0;
 height: 100%;
-max-width: 
+overflow: hidden;
 }
 
-img{
+#bandeau{
 width: 100%;
 height: 100%;
 max-width: 506px;
