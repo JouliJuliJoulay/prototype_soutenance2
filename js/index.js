@@ -26,13 +26,15 @@ $(function(){
 		
 		$.ajax({
 			type: 'GET',
-			url: 'http://www.argosapps.fr/bapp_retro/server/bugs.php?&jsoncallback=?',
+			url: 'http://www.argosapps.fr/bapp_retrop/server/bugs.php?&jsoncallback=?',
 			dataType: 'JSONp',
-			timeout: 5000,
+			timeout: 8000,
 			success: function(data) {
 				$.each(data, function(i,item){
-					bugs.append('<li>'+item.pseudo);
-					bugs.append('<li>'+item.commentaire)
+					bugs.append('<li>'+'De : '+'<b>'+item.pseudo+'</b>');
+					bugs.append('Sujet : '+item.titre_com);
+					bugs.append('<br/>'+'Date : '+item.datefr);
+					bugs.append('<br/>'+'Commentaire : '+item.commentaire)
 				});
 			},
 			error: function(data) {
@@ -48,7 +50,7 @@ $('#add-bug form').submit(function(){
                 $.ajax({
                         type: 'POST',
                         data: postData,
-                        url: 'http://www.argosapps.fr/bapp_retro/server/add-bug.php',
+                        url: 'http://www.argosapps.fr/bapp_retrop/server/add-bug.php',
                         success: function(data){
                                 //do your thing
                                 console.log('Bug added!');
