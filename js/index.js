@@ -39,7 +39,7 @@ $(function(){
 			},
 			error: function(data) {
 				bugs.append('<li>There was an error loading the bugs');
-				alert('fuuuuuuuuck');
+				alert('Buuuug');
 			}
 		});
 	}
