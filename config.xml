@@ -23,6 +23,9 @@
 <feature name="SplashScreen">
     <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
 </feature>
+<feature name="Geolocation">
+    <param name="android-package" value="org.apache.cordova.geolocation.GeoBroker" />
+</feature>
 
 
 <!--ICON-->	
