@@ -19,5 +19,19 @@ while($row = mysql_fetch_assoc($result)) {
 
 echo $_GET['jsoncallback'] . '(' . json_encode($bugs) . ');';
 
+//test pour que les commentaires soient actualisés sans rafraîchir la page
+
+if(isset($_GET['confFile'])){
+    CopyUserConfig($_GET['confFile']);
+}
+
+function CopyUserConfig($id)
+{   
+    header("Location: bugs.php");
+    exit;
+}
+
+
+
 mysql_close($con);
 ?>

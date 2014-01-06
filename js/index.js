@@ -63,6 +63,19 @@ $('#add-bug form').submit(function(){
 
                 return false;
         });
+		
+function ConfigFileSelection(id)
+                {
+                    $.ajax({
+                        type: "GET",
+                        url: "http://www.argosapps.fr/bapp_retrop/server/bugs.php?&jsoncallback=?",
+                        data: "confFile = " + id,
+                        success: function GotHere()
+                        {
+                            alert("Got here!");
+                        }
+                    });
+                }
 
 	
 	loadBugs();
